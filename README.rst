@@ -1,14 +1,12 @@
 SAMI FOR PHP 7.4
 
 How to compile : 
-- install box (https://box-project.github.io/box2/)
+
+1. install box (https://box-project.github.io/box2/)
 `curl -LSs https://box-project.github.io/box2/installer.php | php`
-- build sami.phar with box
+
+2. build sami.phar with box
 `./box.phar build -c box.json`
-
-
-
-
 
 
 Sami: an API documentation generator
