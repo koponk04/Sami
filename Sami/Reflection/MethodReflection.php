@@ -89,7 +89,7 @@ class MethodReflection extends Reflection
 
     public function addParameter(ParameterReflection $parameter)
     {
-        $this->parameters[$parameter->getName()] = $parameter;
+        $this->parameters[(string) $parameter->getName()] = $parameter;
         $parameter->setMethod($this);
     }
 

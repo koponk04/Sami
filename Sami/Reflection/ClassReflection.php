@@ -331,7 +331,7 @@ class ClassReflection extends Reflection
 
     public function addProperty(PropertyReflection $property)
     {
-        $this->properties[$property->getName()] = $property;
+        $this->properties[(string) $property->getName()] = $property;
         $property->setClass($this);
     }
 
@@ -371,7 +371,7 @@ class ClassReflection extends Reflection
 
     public function addConstant(ConstantReflection $constant)
     {
-        $this->constants[$constant->getName()] = $constant;
+        $this->constants[(string) $constant->getName()] = $constant;
         $constant->setClass($this);
     }
 
@@ -402,7 +402,7 @@ class ClassReflection extends Reflection
 
     public function addMethod(MethodReflection $method)
     {
-        $this->methods[$method->getName()] = $method;
+        $this->methods[(string) $method->getName()] = $method;
         $method->setClass($this);
     }
 
@@ -579,7 +579,7 @@ class ClassReflection extends Reflection
     {
         $parent = $this;
         while ($parent = $parent->getParent()) {
-            if ('Exception' == $parent->getName()) {
+            if ('Exception' == (string) $parent->getName()) {
                 return true;
             }
         }
