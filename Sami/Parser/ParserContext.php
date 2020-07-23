@@ -54,7 +54,7 @@ class ParserContext
 
     public function addAlias($alias, $name)
     {
-        $this->aliases[$alias] = $name;
+        $this->aliases[(string) $alias] = $name;
     }
 
     public function getAliases()
